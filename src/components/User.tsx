@@ -17,10 +17,6 @@ export const User: React.FC<UserProps> = ({ user, onUpdateUser, onDelete }) => {
   const [editableUser, setEditableUser] = useState<IUser>(user);
   const [SecShowInput, setSecShowInput] = useState(false);
 
-  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEditableUser({ ...editableUser, name: e.target.value });
-  };
-
   const handlePercentageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEditableUser({ ...editableUser, percentage: Number(e.target.value) });
   };
